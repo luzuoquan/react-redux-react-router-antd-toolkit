@@ -1,0 +1,11 @@
+{
+    "name": "carfinancialweb",
+    "script": "app.js",
+    "env": {
+        "DEBUG": "*",
+        "NODE_ENV": "development"
+    },
+    "env_prod": {
+        "NODE_ENV": "production"
+    }
+}
