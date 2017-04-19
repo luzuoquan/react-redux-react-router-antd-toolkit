@@ -1,0 +1,25 @@
+{
+  "name": "react-redux-react-router-antd-toolkit",
+  "version": "0.0.1",
+  "description": "build for development react redux react-router antd",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luzuoquan/react-redux-react-router-antd-toolkit.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-router",
+    "antd"
+  ],
+  "author": "luzuoquan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luzuoquan/react-redux-react-router-antd-toolkit/issues"
+  },
+  "homepage": "https://github.com/luzuoquan/react-redux-react-router-antd-toolkit#readme"
+}
