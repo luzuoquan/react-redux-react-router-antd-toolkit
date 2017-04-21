@@ -4,8 +4,7 @@ const static = require('koa-static')
 const Webpack = require('webpack')
 const koaWebpack = require('koa-webpack')
 const devWebpackConf = require('./build/webpack.dev.conf')
-const convert = require('koa-convert')
-const historyFallback = require('./lib/index')
+const historyFallback = require('koa2-history-api-fallback')
 
 const app = new Koa();
 
