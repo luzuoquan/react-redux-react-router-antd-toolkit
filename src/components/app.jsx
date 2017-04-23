@@ -3,6 +3,10 @@ import { store, history } from '../redux/store'
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import { withRouter} from 'react-router'
+import { Layout, Menu, Breadcrumb, Icon } from 'antd'
+
+const { Header, Content, Footer, Sider } = Layout
+const SubMenu = Menu.SubMenu
 
 export default class App extends Component {
 	render() {
