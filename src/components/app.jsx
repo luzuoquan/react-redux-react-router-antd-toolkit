@@ -9,7 +9,7 @@ export default class App extends Component {
 		return (
 			<Provider store={store}>
   				<ConnectedRouter history={history}>
-  					123
+  					<div>123</div>
   				</ConnectedRouter>
   			</Provider>
 		)

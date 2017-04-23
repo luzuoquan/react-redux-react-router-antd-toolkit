@@ -4,7 +4,10 @@
   "description": "build for development react redux react-router antd",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development pm2 startOrRestart pm2.json",
+    "build": "NODE_ENV=production node build/build.js",
+    "local": "NODE_ENV=development node app.js"
   },
   "repository": {
     "type": "git",
@@ -34,6 +37,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
     "koa": "^2.2.0",
