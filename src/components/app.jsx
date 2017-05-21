@@ -26,15 +26,12 @@ export default class App extends Component {
 	componentWillMount() {
 		const {history} = this.props
 
-		if(location.pathname === '/') {
-			location.replace('/home/feed')
-		}
+		// if(location.pathname === '/') {
+		// 	location.replace('/home/feed')
+		// }
 		// console.info(location)
 	}
 	render() {
-		if(location.pathname === '/') {
-			<Redirect to="/home/feed" />
-		}
 		return (
 			<Provider store={store}>
   				<ConnectedRouter history={history}>
@@ -70,6 +67,7 @@ export default class App extends Component {
 			        		</Header>
 			        		<Content>
 			        			<div className="spa-page">
+			        				{location.pathname === '/' ? <Redirect to="/home/feed" /> : null}
 			        				{componentsRoutes.map((route, index) => (
 			            				<Route
 			            					key={index}
