@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './src/components/app'
-import './src/assets/css/app.css'
+import './src/assets/css/app.scss'
 
 const render = Component => {
 	ReactDOM.render(
