@@ -72,55 +72,55 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd'
 import { routes, componentsRoutes } from '../router'
 
 <Provider store={store}>
-  				<ConnectedRouter history={history}>
-  					<Layout>
-  						<Sider
-							collapsible
-							collapsed={this.state.collapsed}
-							onCollapse={this.onCollapse}
-				        >
-			          		<div className="logo"></div>
-			          		<Menu theme="dark"
-			          			mode={this.state.mode}
-			          			onSelect={this.onSelect}
-			          			onOpenChange={this.onOpenChange}
-			          			openKeys={this.state.openKeys}
-			          			defaultOpenKeys={this.state.defaultOpenKeys}
-			          			selectedKeys={this.state.selectedKeys}
-			          			defaultSelectedKeys={this.state.defaultSelectedKeys}>
-			          			{routes.map(item => (
-			          				<SubMenu
-			          					key={item.key}
-			          					title={<span><Icon type={item.iconType} /><span className="nav-text">{item.title}</span></span>}>
-			          					{item.routes.map(routeItem => (
-			          						<Menu.Item key={routeItem.key}><NavLink to={routeItem.path}>{routeItem.title}</NavLink></Menu.Item>
-			          					))}
-			          				</SubMenu>
-			          			))}
-			          		</Menu>
-			        	</Sider>
-			        	<Layout>
-			        		<Header>
-			        			头部
-			        		</Header>
-			        		<Content>
-			        			<div className="spa-page">
-			        				{location.pathname === '/' ? <Redirect to="/home/feed" /> : null}
-			        				{componentsRoutes.map((route, index) => (
-			            				<Route
-			            					key={index}
-			            					path={route.basename + route.path}
-		            						exact={route.exact}
-		            						component={route.component}
-		            					/>
-			            			))}
-			        			</div>
-			        		</Content>
-			        		<Footer style={{ textAlign: 'center' }}>
-			            		react-antd© 2017
-			          		</Footer>
-			        	</Layout>
-  					</Layout>
-  				</ConnectedRouter>
-  			</Provider>
+	<ConnectedRouter history={history}>
+		<Layout>
+			<Sider
+			collapsible
+			collapsed={this.state.collapsed}
+			onCollapse={this.onCollapse}
+        >
+      		<div className="logo"></div>
+      		<Menu theme="dark"
+      			mode={this.state.mode}
+      			onSelect={this.onSelect}
+      			onOpenChange={this.onOpenChange}
+      			openKeys={this.state.openKeys}
+      			defaultOpenKeys={this.state.defaultOpenKeys}
+      			selectedKeys={this.state.selectedKeys}
+      			defaultSelectedKeys={this.state.defaultSelectedKeys}>
+      			{routes.map(item => (
+      				<SubMenu
+      					key={item.key}
+      					title={<span><Icon type={item.iconType} /><span className="nav-text">{item.title}</span></span>}>
+      					{item.routes.map(routeItem => (
+      						<Menu.Item key={routeItem.key}><NavLink to={routeItem.path}>{routeItem.title}</NavLink></Menu.Item>
+      					))}
+      				</SubMenu>
+      			))}
+      		</Menu>
+    	</Sider>
+    	<Layout>
+    		<Header>
+    			头部
+    		</Header>
+    		<Content>
+    			<div className="spa-page">
+    				{location.pathname === '/' ? <Redirect to="/home/feed" /> : null}
+    				{componentsRoutes.map((route, index) => (
+        				<Route
+        					key={index}
+        					path={route.basename + route.path}
+    						exact={route.exact}
+    						component={route.component}
+    					/>
+        			))}
+    			</div>
+    		</Content>
+    		<Footer style={{ textAlign: 'center' }}>
+        		react-antd© 2017
+      		</Footer>
+    	</Layout>
+		</Layout>
+	</ConnectedRouter>
+</Provider>
 ```
